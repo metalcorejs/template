@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "webpack template for projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metalcorejs/template.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Tony Kark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metalcorejs/template/issues"
+  },
+  "homepage": "https://github.com/metalcorejs/template#readme"
+}
