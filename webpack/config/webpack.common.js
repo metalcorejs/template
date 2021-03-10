@@ -19,6 +19,7 @@ export default () =>
         extensions: [".js", ".ts", ".tsx", ".jsx"],
       },
     },
+    modules.loadStatic(),
     modules.setHtml(),
     modules.loadStyles(env),
     modules.transpileJs()
