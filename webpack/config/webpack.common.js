@@ -7,6 +7,9 @@ import { SRC_DIR } from "../utils/constants";
 // Modules
 import * as modules from "../modules";
 
+// Env
+const env = process.env.NODE_ENV;
+
 // Common Config
 export default () =>
   merge(
@@ -17,6 +20,6 @@ export default () =>
       },
     },
     modules.setHtml(),
-    modules.loadStyles(),
+    modules.loadStyles(env),
     modules.transpileJs()
   );
