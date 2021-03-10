@@ -16,4 +16,16 @@ export default () =>
       filename: "bundle.[contenthash].js",
       path: BUILD_DIR,
     },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            name: "vendors",
+            test: /node_modules/,
+            chunks: "all",
+            enforce: true,
+          },
+        },
+      },
+    },
   });
