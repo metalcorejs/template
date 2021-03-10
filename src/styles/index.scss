@@ -1,4 +1,8 @@
+// Fonts
+@import "./fonts.scss";
+
 body {
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(33, 133, 151);
   display: flex;
   justify-content: center;
