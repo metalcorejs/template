@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/metalcorejs/template#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
     "app-root-path": "^3.0.0",
+    "babel-loader": "^8.2.2",
     "chalk": "^4.1.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.1.2",
@@ -38,5 +42,9 @@
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
