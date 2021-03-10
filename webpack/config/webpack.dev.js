@@ -14,8 +14,13 @@ export default () => {
     devtool: "eval-cheap-module-source-map",
     mode: "development",
     target: "web",
+    resolve: {
+      alias: {
+        "react-dom": "@hot-loader/react-dom",
+      },
+    },
     entry: {
-      main: ["webpack-hot-middleware/client"],
+      main: ["webpack-hot-middleware/client", "react-hot-loader/patch"],
     },
     output: {
       filename: "[name].bundle.js",

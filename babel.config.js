@@ -15,5 +15,6 @@ export default (api) => {
         },
       ],
     ],
+    plugins: ["react-hot-loader/babel"],
   };
 };
