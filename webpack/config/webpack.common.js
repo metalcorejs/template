@@ -13,5 +13,6 @@ export default () =>
     {
       entry: { main: [SRC_DIR] },
     },
-    modules.setHtml()
+    modules.setHtml(),
+    modules.loadStyles()
   );
