@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import img1 from "../../static/images/1.jpg";
 import img1jpg from "../../static/images/1.webp";
 
-export const Home = () => (
+export const Home: FC = () => (
   <>
     <h1>Hello React!!!</h1>
     <picture>
