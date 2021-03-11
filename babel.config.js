@@ -5,6 +5,7 @@ export default (api) => {
   return {
     presets: [
       "@babel/react",
+      "@babel/preset-typescript",
       [
         "@babel/env",
         {
