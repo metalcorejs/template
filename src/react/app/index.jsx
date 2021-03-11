@@ -1,17 +1,22 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
-import img1 from "../../static/images/1.jpg";
-import img1jpg from "../../static/images/1.webp";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Home } from "../pages/home";
+import { About } from "../pages/about";
 
 function App() {
   return (
-    <>
-      <h1>Hello React!!!</h1>
-      <picture>
-        <source srcSet={img1} />
-        <img loading="lazy" src={img1jpg} alt="running man" className="img" />
-      </picture>
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route render={() => <h1>404</h1>} />
+      </Switch>
+    </Router>
   );
 }
 
