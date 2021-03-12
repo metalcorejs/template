@@ -1,5 +1,6 @@
 // Core
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import sass from "sass";
 
 // Constants
 import { ROOT_DIR } from "../../utils/constants";
@@ -38,6 +39,7 @@ export const loadStyles = (env) => {
               loader: "sass-loader",
               options: {
                 sourceMap: true,
+                implementation: sass,
               },
             },
           ],
