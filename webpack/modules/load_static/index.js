@@ -3,7 +3,7 @@ export const loadStatic = () => {
     module: {
       rules: [
         {
-          test: /\.(png|jpg|webp|gif|jpeg)$/,
+          test: /\.(png|jpg|webp|gif|jpeg|svg)$/,
           use: {
             loader: "file-loader",
             options: {
