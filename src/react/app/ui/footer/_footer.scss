@@ -1,0 +1,25 @@
+.footer {
+  width: 100%;
+  background-color: #fff;
+
+  &-main {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 372px;
+    }
+
+    &__column {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      &:nth-child(1) {
+        width: 260px;
+      }
+    }
+  }
+}

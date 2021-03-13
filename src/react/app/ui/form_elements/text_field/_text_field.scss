@@ -1,0 +1,23 @@
+.text-field {
+  display: flex;
+  flex-flow: column;
+  &_subscription {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 44px;
+      height: 44px;
+      background: url(../static/images/arrow_forward.svg) center no-repeat;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    width: 260px;
+    height: 44px;
+  }
+}
