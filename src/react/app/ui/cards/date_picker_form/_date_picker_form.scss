@@ -1,0 +1,21 @@
+.date-picker-form {
+  width: 380px;
+  height: 374px;
+  margin-left: 140px;
+  margin-top: 140px;
+  padding: 40px 30px 30px 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__title {
+    margin-bottom: 21px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1f2041;
+  }
+}
