@@ -1,0 +1,8 @@
+@use './mixins' as *;
+
+.container {
+  max-width: toRem(1140);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}

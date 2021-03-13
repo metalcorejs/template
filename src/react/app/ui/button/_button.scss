@@ -1,0 +1,41 @@
+@use '../../../../styles/mixins' as *;
+
+.btn {
+  padding: toRem(9) toRem(20) toRem(10) toRem(20);
+  border-radius: 22px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  &_shallow {
+    padding: toRem(7) toRem(20) toRem(8) toRem(20);
+    position: relative;
+    background-color: #fff;
+    border-radius: 22px;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    z-index: 1;
+    color: #bc9cff;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+  }
+
+  &_filled {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: white;
+  }
+}

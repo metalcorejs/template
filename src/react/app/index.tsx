@@ -1,15 +1,15 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home } from "../pages/home";
 import { About } from "../pages/about";
+import { Main } from "../pages/main";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Main />
         </Route>
         <Route exact path="/about">
           <About />

@@ -1,3 +1,7 @@
-@forward "./reset.scss";
-@forward "./fonts.scss";
-@forward "./normalize.scss";
+@forward "./fonts";
+@forward "./normalize";
+@forward "./reset";
+@forward './layout';
+
+@forward '../react/app/ui/button/button';
+@forward '../react/app/ui/header/header';
