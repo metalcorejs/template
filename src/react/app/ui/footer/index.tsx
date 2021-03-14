@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="footer__main footer-main">
         <div className="container footer-main__container">
           <div className="footer-main__column">
-            <Logo />
+            <Logo className="footer-main__logo" />
             <div className="footer-main__text">
               Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
               «Отельные взгляды»
@@ -105,12 +105,12 @@ export const Footer = () => {
           <div className="footer-main__column">
             <nav className="nav footer__nav">
               <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link nav__link_active">
                     Подписка
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer-main__text footer__nav-item">
                   <a href="#" className="nav__link">
                     Получайте специальные предложения и новости сервиса
                   </a>
@@ -120,7 +120,7 @@ export const Footer = () => {
                   type="email"
                   id="email"
                   placeholder="Email"
-                  className="text-field_subscription"
+                  className="text-field_subscription footer-main__text-field"
                   inputClassName="text-field__input_subscription"
                 />
               </ul>

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Logo() {
+export function Logo() {
   return (
     <svg width={106} height={40} fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -57,5 +57,3 @@ function Logo() {
     </svg>
   );
 }
-
-export default Logo;
