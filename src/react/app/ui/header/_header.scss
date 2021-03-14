@@ -5,6 +5,7 @@
   height: 70px;
   position: fixed;
   top: 0;
+  z-index: 10000;
 
   &__container {
     display: flex;
@@ -36,10 +37,16 @@
     }
 
     &_dropdown {
+      position: relative;
+      margin-right: 45px;
       &::after {
-        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -24px;
         width: 24px;
         height: 21px;
+        margin-top: 2px;
         background: url(../static/images/expand_more.svg) center no-repeat;
       }
     }

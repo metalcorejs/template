@@ -1,6 +1,7 @@
 .text-field {
   display: flex;
   flex-flow: column;
+  width: 260px;
   &_subscription {
     position: relative;
     &::after {

@@ -32,7 +32,7 @@ export const Header = () => {
                 Новости
               </a>
             </li>
-            <li className="nav__item">
+            <li className="nav__item nav__item_dropdown">
               <a href="#" className="nav__link">
                 Соглашения
               </a>
@@ -44,7 +44,7 @@ export const Header = () => {
             </li>
             <li className="nav__item">
               <Button href="#" className="header__btn btn_filled">
-                Регистрация
+                Зарегистрироваться
               </Button>
             </li>
           </ul>

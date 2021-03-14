@@ -17,27 +17,27 @@ export const Footer = () => {
           <div className="footer-main__column">
             <nav className="nav footer__nav">
               <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
+                <li className="nav__item footer__nav-item">
+                  <a href="#" className="nav__link nav__link_active">
                     Навигация
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     О нас
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Новости
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Служба поддержки
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Услуги
                   </a>
@@ -48,27 +48,27 @@ export const Footer = () => {
           <div className="footer-main__column">
             <nav className="nav footer__nav">
               <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
+                <li className="nav__item footer__nav-item">
+                  <a href="#" className="nav__link nav__link_active">
                     О нас
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     О сервисе
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Наша команда
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Вакансии
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item  footer__nav-item">
                   <a href="#" className="nav__link">
                     Инвесторы
                   </a>
@@ -79,22 +79,22 @@ export const Footer = () => {
           <div className="footer-main__column">
             <nav className="nav footer__nav">
               <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
+                <li className="nav__item footer__nav-item">
+                  <a href="#" className="nav__link nav__link_active">
                     Служба поддержки
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Соглашения
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Сообщества
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item footer__nav-item">
                   <a href="#" className="nav__link">
                     Связь с нами
                   </a>
@@ -106,23 +106,13 @@ export const Footer = () => {
             <nav className="nav footer__nav">
               <ul className="nav__menu nav__menu_vertical">
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Навигация
+                  <a href="#" className="nav__link nav__link_active">
+                    Подписка
                   </a>
                 </li>
                 <li className="nav__item">
                   <a href="#" className="nav__link">
-                    О нас
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Новости
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Служба поддержки
+                    Получайте специальные предложения и новости сервиса
                   </a>
                 </li>
                 <TextField
