@@ -67,6 +67,11 @@
   }
 
   &__month-day {
-    color: black;
+    color: rgba(31, 32, 65, 0.5);
+
+    &_prev,
+    &_next {
+      color: rgba(31, 32, 65, 0.25);
+    }
   }
 }
