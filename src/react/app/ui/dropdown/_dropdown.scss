@@ -1,0 +1,73 @@
+.dropdown {
+  position: relative;
+  &__select {
+    padding: 12.5px 0px 13.5px 15px;
+    width: 320px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 2px 2px 0px 0px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      background: url(../static/images/expand_more.svg) no-repeat center;
+    }
+  }
+
+  &__options {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-top: 0px;
+    border-radius: 0px 0px 2px 2px;
+    padding: 7px 7px 13px 15px;
+    width: 320px;
+    position: absolute;
+    content: "";
+    top: 44px;
+    left: 0;
+    background-color: white;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+
+    &-title {
+      flex: 1 1 auto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1f2041;
+    }
+
+    &-btn {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      font-size: 18px;
+      line-height: 22px;
+      border-radius: 50%;
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      color: rgba(31, 32, 65, 0.5);
+    }
+
+    &-amount {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+}

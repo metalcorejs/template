@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import { setDate } from "./date";
 
-export const Calendar = () => {
+interface ICalendar {
+  isHidden: boolean;
+}
+
+export const Calendar: FC<ICalendar> = ({ isHidden }) => {
   const [calendar, setCalendar] = useState(setDate);
   const { year, monthNumber, month, days, prevDays, nextDays } = calendar;
   console.log(year, monthNumber, month, days, prevDays, nextDays);
   const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
+  console.log(isHidden);
 
   const setNextMonth = () => {
     const newDate = new Date(year, monthNumber + 1);
@@ -17,7 +23,7 @@ export const Calendar = () => {
     setCalendar(setDate(newDate));
   };
   return (
-    <div className="calendar">
+    <div className={`calendar  ${isHidden ? "calendar_hidden" : ""}`}>
       <div className="calendar__slider">
         <button
           className="calendar__btn calendar__btn_back"

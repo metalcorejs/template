@@ -1,6 +1,7 @@
 .date-picker-form {
   width: 380px;
   height: 374px;
+  // TODO remove margin from block element class it's bad practice
   margin-left: 140px;
   margin-top: 140px;
   padding: 40px 30px 30px 30px;
@@ -17,5 +18,11 @@
     font-size: 24px;
     line-height: 29px;
     color: #1f2041;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
