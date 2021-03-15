@@ -1,6 +1,10 @@
-import React, { useState, MouseEvent } from "react";
+import React, { useState, MouseEvent, FC } from "react";
 
-export const Dropdown = () => {
+interface IDropdown {
+  className: string;
+}
+
+export const Dropdown: FC<IDropdown> = ({ className }) => {
   const options = [
     { name: "взрослые", amount: 0 },
     { name: "дети", amount: 0 },
@@ -68,7 +72,7 @@ export const Dropdown = () => {
   ));
 
   return (
-    <div className={`dropdown`}>
+    <div className={`dropdown ${className}`}>
       <div
         className={`dropdown__select ${isOpen ? "dropdown__select_open" : ""}`}
         onClick={dropdownHandler}

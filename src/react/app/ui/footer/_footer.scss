@@ -37,15 +37,16 @@
       font-size: 14px;
       line-height: 24px;
       color: rgba(31, 32, 65, 0.75);
-
-      &:nth-child(3) {
-        // background-color: aqua;
-        // // margin-right: 20px;
-      }
     }
   }
 
   &__nav-item {
     margin-bottom: 13px;
+    margin-left: 0px;
   }
+}
+
+.nav__item.footer__nav-item + .nav__item.footer__nav-item {
+  margin-bottom: 13px;
+  margin-left: 0px;
 }

@@ -12,6 +12,8 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75);
     position: relative;
+    cursor: pointer;
+    user-select: none;
 
     &::after {
       position: absolute;
@@ -49,6 +51,7 @@
     left: 0;
     background-color: white;
     display: none;
+    z-index: 100;
 
     &_open {
       display: block;

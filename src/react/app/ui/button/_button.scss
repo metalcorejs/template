@@ -37,5 +37,25 @@
   &_filled {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     color: white;
+
+    &_big {
+      width: 320px;
+      height: 44px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background: url(../static/images/arrow_forward_white.svg) center
+          no-repeat;
+      }
+    }
   }
 }

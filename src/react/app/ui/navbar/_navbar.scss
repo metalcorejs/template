@@ -8,15 +8,13 @@
   }
 
   &__item {
-    margin-right: 20px;
-
-    &:nth-last-child(1) {
-      margin-right: 0;
+    & + & {
+      margin-left: 20px;
     }
 
     &_dropdown {
       position: relative;
-      margin-right: 45px;
+      margin-right: 25px;
       &::after {
         position: absolute;
         content: "";
@@ -31,8 +29,6 @@
   }
 
   &__link {
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
