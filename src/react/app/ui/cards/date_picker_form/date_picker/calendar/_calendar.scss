@@ -80,6 +80,12 @@
       color: white;
     }
 
+    &_selected {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-radius: 22px;
+      color: white;
+    }
+
     &_prev,
     &_next {
       color: rgba(31, 32, 65, 0.25);

@@ -3,15 +3,33 @@ import { Calendar } from "./calendar";
 import { setDate } from "./calendar/date";
 
 interface IDatePicker {
-  label: string;
+  label?: string;
+}
+
+interface IState {
+  isHidden: boolean;
+  in: string;
+  isInSelected: boolean;
+  inSelectedId: null | number;
+  outSelectedId: null | number;
+  isOutSelected: boolean;
+  out: string;
 }
 
 export const DatePicker: FC<IDatePicker> = ({ label }) => {
   const [calendar, setCalendar] = useState(setDate);
-  const initState = { isHidden: true, in: "11.11.2021", out: "21.11.2021" };
+  const initState: IState = {
+    isHidden: true,
+    in: "ДД.ММ.ГГГГ",
+    isInSelected: false,
+    inSelectedId: null,
+    outSelectedId: null,
+    isOutSelected: false,
+    out: "ДД.ММ.ГГГГ",
+  };
   const [state, setState] = useState(initState);
 
-  const datePickerHandler = (e: MouseEvent<HTMLElement>) => {
+  const datePickerInputHandler = (e: MouseEvent<HTMLElement>) => {
     const event = e.target as HTMLElement;
     console.dir(event.classList);
     if (
@@ -32,36 +50,51 @@ export const DatePicker: FC<IDatePicker> = ({ label }) => {
           const id = Number(target.dataset.id);
           const date = new Date(calendar.year, calendar.monthNumber, id);
           console.log(id);
-          setState((prev) => ({
-            ...prev,
-            in: `${date.getDate()}.${
-              date.getMonth() + 1
-            }.${date.getFullYear()}`,
-          }));
+          const newDate = `${date.getDate()}.${
+            date.getMonth() + 1
+          }.${date.getFullYear()}`;
+          setState((prev) => {
+            if (!state.isInSelected) {
+              return {
+                ...prev,
+                in: newDate,
+                isInSelected: true,
+                inSelectedId: id,
+              };
+            }
+            return {
+              ...prev,
+              out: newDate,
+              isOutSelected: true,
+              outSelectedId: id,
+            };
+          });
         }
         return;
       }}
     >
       <div className="date-picker__section">
         <label htmlFor="#" className="date-picker__label">
-          {label}
+          Прибытие
         </label>
-        <div className="date-picker__input" onClick={datePickerHandler}>
+        <div className="date-picker__input" onClick={datePickerInputHandler}>
           <time className="date-picker__date">{state.in}</time>
         </div>
       </div>
       <div className="date-picker__section">
         <label htmlFor="#" className="date-picker__label">
-          {state.out}
+          Отъезд
         </label>
-        <div className="date-picker__input" onClick={datePickerHandler}>
-          <time className="date-picker__date">10.10.2021</time>
+        <div className="date-picker__input" onClick={datePickerInputHandler}>
+          <time className="date-picker__date">{state.out}</time>
         </div>
       </div>
       <Calendar
         isHidden={state.isHidden}
         calendar={calendar}
         setCalendar={setCalendar}
+        inSelectedId={state.inSelectedId}
+        outSelectedId={state.outSelectedId}
       />
     </div>
   );

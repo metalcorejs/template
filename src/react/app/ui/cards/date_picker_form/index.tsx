@@ -10,7 +10,7 @@ export const DatePickerForm = () => {
         Найдём номера под ваши пожелания
       </h2>
       <form className="date-picker-form__form">
-        <DatePicker label="Прибытие" />
+        <DatePicker />
       </form>
       <Dropdown className="date-picker-form__dropdown" />
       <Button href="#" className="btn_filled btn_filled_big">

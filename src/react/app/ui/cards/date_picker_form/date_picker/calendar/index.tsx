@@ -7,12 +7,16 @@ interface ICalendar {
   isHidden: boolean;
   calendar: IDate;
   setCalendar: any;
+  inSelectedId: number | null;
+  outSelectedId: number | null;
 }
 
 export const Calendar: FC<ICalendar> = ({
   isHidden,
   calendar,
   setCalendar,
+  inSelectedId,
+  outSelectedId,
 }) => {
   const { year, monthNumber, month, days, prevDays, nextDays } = calendar;
   console.log(year, monthNumber, month, days, prevDays, nextDays);
@@ -56,7 +60,14 @@ export const Calendar: FC<ICalendar> = ({
           </span>
         ))}
         {days.map((day, i) => (
-          <span className="calendar__month-day" data-id={day}>
+          <span
+            className={`calendar__month-day ${
+              inSelectedId === day || outSelectedId === day
+                ? "calendar__month-day_selected"
+                : ""
+            }`}
+            data-id={day}
+          >
             {day}
           </span>
         ))}
