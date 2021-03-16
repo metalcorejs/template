@@ -1,8 +1,8 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { About } from "../pages/about";
-import { Main } from "../pages/main";
+import { About } from "./pages/about";
+import { Main } from "./pages/main";
 
 function App() {
   return (
