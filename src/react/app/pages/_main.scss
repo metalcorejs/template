@@ -3,4 +3,11 @@
   height: 900px;
   background: url(../static/images/bg.jpg) no-repeat center;
   display: flex;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 140px;
+  }
 }

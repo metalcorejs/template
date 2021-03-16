@@ -6,7 +6,9 @@ export const MainLayout = ({ children }: any) => {
   return (
     <>
       <Header />
-      <main className="main">{children}</main>
+      <main className="main">
+        <div className="container main__container">{children}</div>
+      </main>
       <Footer />
     </>
   );

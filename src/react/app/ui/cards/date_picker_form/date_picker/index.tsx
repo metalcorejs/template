@@ -10,8 +10,8 @@ interface IState {
   isHidden: boolean;
   in: string;
   isInSelected: boolean;
-  inSelectedId: null | number;
-  outSelectedId: null | number;
+  inSelectedId: number;
+  outSelectedId: number;
   isOutSelected: boolean;
   out: string;
 }
@@ -22,8 +22,8 @@ export const DatePicker: FC<IDatePicker> = ({ label }) => {
     isHidden: true,
     in: "ДД.ММ.ГГГГ",
     isInSelected: false,
-    inSelectedId: null,
-    outSelectedId: null,
+    inSelectedId: 0,
+    outSelectedId: 0,
     isOutSelected: false,
     out: "ДД.ММ.ГГГГ",
   };
@@ -48,6 +48,7 @@ export const DatePicker: FC<IDatePicker> = ({ label }) => {
         const target = e.target as HTMLElement;
         if (target.dataset.id) {
           const id = Number(target.dataset.id);
+          if (state.isInSelected && id < state.inSelectedId) return;
           const date = new Date(calendar.year, calendar.monthNumber, id);
           console.log(id);
           const newDate = `${date.getDate()}.${
