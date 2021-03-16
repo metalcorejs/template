@@ -1,12 +1,19 @@
-import React, { useState, FC } from "react";
+import React, { FC } from "react";
 import { setDate } from "./date";
+
+import { IDate } from "./date";
 
 interface ICalendar {
   isHidden: boolean;
+  calendar: IDate;
+  setCalendar: any;
 }
 
-export const Calendar: FC<ICalendar> = ({ isHidden }) => {
-  const [calendar, setCalendar] = useState(setDate);
+export const Calendar: FC<ICalendar> = ({
+  isHidden,
+  calendar,
+  setCalendar,
+}) => {
   const { year, monthNumber, month, days, prevDays, nextDays } = calendar;
   console.log(year, monthNumber, month, days, prevDays, nextDays);
   const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
@@ -49,7 +56,9 @@ export const Calendar: FC<ICalendar> = ({ isHidden }) => {
           </span>
         ))}
         {days.map((day, i) => (
-          <span className="calendar__month-day">{day}</span>
+          <span className="calendar__month-day" data-id={day}>
+            {day}
+          </span>
         ))}
         {nextDays.map((day, i) => (
           <span className="calendar__month-day calendar__month-day_next">

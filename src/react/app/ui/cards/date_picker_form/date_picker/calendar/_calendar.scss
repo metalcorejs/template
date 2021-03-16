@@ -1,7 +1,7 @@
 .calendar {
   position: absolute;
   content: "";
-  top: 44px;
+  top: 74px;
   left: 0;
   width: 320px;
   height: 369px;
@@ -69,10 +69,16 @@
     font-size: 12px;
     line-height: 15px;
     color: #bc9cff;
+    border-radius: 22px;
   }
 
   &__month-day {
     color: rgba(31, 32, 65, 0.5);
+    &:hover {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-radius: 22px;
+      color: white;
+    }
 
     &_prev,
     &_next {

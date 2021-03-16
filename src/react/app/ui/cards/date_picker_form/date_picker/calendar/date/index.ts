@@ -40,7 +40,16 @@ const getPrevDays = (date: Date) => {
   }
 };
 
-export const setDate = (date: Date = new Date()) => {
+export interface IDate {
+  year: number;
+  month: string;
+  monthNumber: number;
+  days: number[];
+  prevDays: number[];
+  nextDays: number[];
+}
+
+export const setDate = (date: Date = new Date()): IDate => {
   const year = date.getFullYear();
   const month = months[date.getMonth()];
   const monthNumber = date.getMonth();

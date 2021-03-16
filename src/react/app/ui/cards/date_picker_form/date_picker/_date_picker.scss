@@ -1,4 +1,9 @@
 .date-picker {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
   &__label {
     margin-bottom: 4.5px;
     font-family: Montserrat;

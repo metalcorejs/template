@@ -11,7 +11,6 @@ export const DatePickerForm = () => {
       </h2>
       <form className="date-picker-form__form">
         <DatePicker label="Прибытие" />
-        <DatePicker label="Выезд" />
       </form>
       <Dropdown className="date-picker-form__dropdown" />
       <Button href="#" className="btn_filled btn_filled_big">
