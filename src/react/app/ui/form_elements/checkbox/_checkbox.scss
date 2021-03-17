@@ -1,0 +1,40 @@
+.checkbox {
+  margin-left: 30px;
+  margin-right: 14px;
+  &__input {
+    display: none;
+    &:checked + label {
+      color: rgba(31, 32, 65, 0.75);
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 4px;
+        left: -26px;
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    color: rgba(31, 32, 65, 0.5);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -30px;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      border: 1px solid #bc9cff;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

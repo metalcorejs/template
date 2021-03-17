@@ -1,5 +1,6 @@
 import * as React from "react";
 import { TextField } from "../../../form_elements/text_field";
+import { CheckBox } from "../../../form_elements/checkbox";
 
 export const RegistrationForm = () => {
   return (
@@ -12,6 +13,7 @@ export const RegistrationForm = () => {
           id="user-name"
           name="user-name"
           type="text"
+          className="reg-form__text-field"
         />
         <TextField
           label=""
@@ -19,7 +21,18 @@ export const RegistrationForm = () => {
           id="user-lastname"
           name="user-lastname"
           type="text"
+          className="reg-form__text-field"
         />
+        <div className="reg-form__checkboxs">
+          <CheckBox
+            id="male"
+            name="sex"
+            type="radio"
+            label="Мужчина"
+            className="reg-form__radio"
+          />
+          <CheckBox id="female" name="sex" type="radio" label="Женщина" />
+        </div>
       </form>
     </div>
   );

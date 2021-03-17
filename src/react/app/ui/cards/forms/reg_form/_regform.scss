@@ -6,6 +6,7 @@
     font-size: 24px;
     line-height: 29px;
     color: #1f2041;
+    margin-bottom: 20px;
   }
 
   &__wrapper {
@@ -15,10 +16,22 @@
     padding: 40px 30px 30px 30px;
     display: flex;
     flex-flow: column;
+    align-items: flex-start;
+  }
+
+  &__checkboxs {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
   }
 
+  &__text-field {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  width: 100%;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
 }
