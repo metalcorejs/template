@@ -2,11 +2,12 @@ import * as React from "react";
 import { TextField } from "../../../form_elements/text_field";
 import { CheckBox } from "../../../form_elements/checkbox";
 import { Toggle } from "../../../form_elements/toggle";
+import { Button } from "../../../button";
 
 export const RegistrationForm = () => {
   return (
     <div className="reg-form__wrapper">
-      <h2 className="reg-form__title">Регистрация аккаунта</h2>
+      <h1 className="reg-form__title">Регистрация аккаунта</h1>
       <form id="reg-form" action="" className="reg-form">
         <TextField
           label=""
@@ -63,6 +64,17 @@ export const RegistrationForm = () => {
           name="toggle"
           label="Получать спецпредложения"
         />
+        <Button href="#" className="btn_filled btn_filled_big">
+          перейти к оплате
+        </Button>
+        <div className="reg-form__nav">
+          <a href="#" className="reg-form__link">
+            Уже есть аккаунт на Toxin
+          </a>
+          <Button href="#" className="btn_shallow">
+            войти
+          </Button>
+        </div>
       </form>
     </div>
   );
