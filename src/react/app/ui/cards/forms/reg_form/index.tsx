@@ -3,6 +3,7 @@ import { TextField } from "../../../form_elements/text_field";
 import { CheckBox } from "../../../form_elements/checkbox";
 import { Toggle } from "../../../form_elements/toggle";
 import { Button } from "../../../button";
+import { BackgroundColor } from "chalk";
 
 export const RegistrationForm = () => {
   return (
@@ -63,8 +64,9 @@ export const RegistrationForm = () => {
           id="toggle"
           name="toggle"
           label="Получать спецпредложения"
+          className="reg-form__toggle"
         />
-        <Button href="#" className="btn_filled btn_filled_big">
+        <Button href="#" className="btn_filled btn_filled_big reg-form__btn">
           перейти к оплате
         </Button>
         <div className="reg-form__nav">

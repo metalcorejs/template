@@ -29,6 +29,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 10000;
+  }
+
+  &__btn {
+    margin-bottom: 30px;
+  }
+
+  &__toggle {
+    margin-bottom: 20px;
   }
 
   width: 100%;
