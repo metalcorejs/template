@@ -2,6 +2,9 @@ import * as React from "react";
 import Logo from "./Logo";
 import { TextField } from "../form_elements/text_field";
 import { FooterNav } from "./footer_nav";
+import { FacebookSvg } from "./facebook";
+import { TwitterSvg } from "./twitter";
+import { InstagramSvg } from "./instagram";
 
 export const Footer = () => {
   return (
@@ -73,7 +76,30 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer__down"></div>
+      <div className="footer__down">
+        <div className="container footer__down-container">
+          <p className="footer__text">
+            Copyright © 2018 Toxin отель. Все права защищены.
+          </p>
+          <ul className="footer__socials">
+            <li className="footer__social-item">
+              <a href="" className="footer__social-link">
+                <FacebookSvg />
+              </a>
+            </li>
+            <li className="footer__social-item">
+              <a href="" className="footer__social-link">
+                <TwitterSvg />
+              </a>
+            </li>
+            <li className="footer__social-item">
+              <a href="" className="footer__social-link">
+                <InstagramSvg />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   );
 };
