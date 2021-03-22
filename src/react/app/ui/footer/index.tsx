@@ -1,6 +1,7 @@
 import * as React from "react";
 import Logo from "./Logo";
 import { TextField } from "../form_elements/text_field";
+import { FooterNav } from "./footer_nav";
 
 export const Footer = () => {
   return (
@@ -15,92 +16,36 @@ export const Footer = () => {
             </div>
           </div>
           <div className="footer-main__column">
-            <nav className="nav footer__nav">
-              <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link nav__link_active">
-                    Навигация
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    О нас
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Новости
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Служба поддержки
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Услуги
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <FooterNav
+              list={[
+                "Навигация",
+                "О нас",
+                "Новости",
+                "Служба поддержки",
+                "Услуги",
+              ]}
+            />
           </div>
           <div className="footer-main__column">
-            <nav className="nav footer__nav">
-              <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link nav__link_active">
-                    О нас
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    О сервисе
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Наша команда
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Вакансии
-                  </a>
-                </li>
-                <li className="nav__item  footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Инвесторы
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <FooterNav
+              list={[
+                "О нас",
+                "О сервисе",
+                "Наша команда",
+                "Вакансии",
+                "Инвесторы",
+              ]}
+            />
           </div>
           <div className="footer-main__column">
-            <nav className="nav footer__nav">
-              <ul className="nav__menu nav__menu_vertical">
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link nav__link_active">
-                    Служба поддержки
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Соглашения
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Сообщества
-                  </a>
-                </li>
-                <li className="nav__item footer__nav-item">
-                  <a href="#" className="nav__link">
-                    Связь с нами
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <FooterNav
+              list={[
+                "Служба поддержки",
+                "Соглашения",
+                "Сообщества",
+                "Связь с нами",
+              ]}
+            />
           </div>
           <div className="footer-main__column">
             <nav className="nav footer__nav">

@@ -4,6 +4,14 @@
 
     &_vertical {
       flex-flow: column;
+
+      & > .nav__item + .nav__item {
+        margin-left: 0;
+      }
+
+      & > .nav__item {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -37,5 +45,31 @@
       color: rgba(31, 32, 65, 0.75);
       font-weight: bold;
     }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header.nav {
+    &__menu {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &__link {
+      color: white;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+      color: white;
+
+      &_dropdown {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 0;
   }
 }
